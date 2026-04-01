@@ -1,0 +1,177 @@
+<div class="container nutrition-page">
+  <header class="page-header flex-row justify-between items-end">
+    <div class="flex-column">
+      <h1 class="page-title text-4xl font-black">Nutrition Tracker</h1>
+      <p class="page-subtitle text-muted">Intelligent intake monitoring for peak performance.</p>
+    </div>
+    <app-button variant="primary" (click)="logMeal()">
+      <span class="material-icons">add</span>
+      Log Meal
+    </app-button>
+  </header>
+
+  <!-- Date Navigation -->
+  <app-card class="glass-card nutrition-date-card" [hoverable]="false">
+    <div class="flex-row items-center justify-between">
+      <app-button variant="glass" size="small" (click)="previousDay()" [disabled]="loading">
+        <span class="material-icons">chevron_left</span>
+      </app-button>
+
+      <div class="flex-row items-center gap-sm clickable" (click)="onDateChange()">
+        <span class="material-icons text-primary">calendar_today</span>
+        <span class="text-lg font-bold">{{ selectedDate | date: 'EEEE, MMM d' }}</span>
+      </div>
+
+      <app-button variant="glass" size="small" (click)="nextDay()" [disabled]="loading || isTodayOrFuture()"
+        [class.opacity-50]="isTodayOrFuture()">
+        <span class="material-icons">chevron_right</span>
+      </app-button>
+    </div>
+  </app-card>
+
+  <div class="main-layout">
+    <!-- Main Content: Meal Groups -->
+    <main class="flex-column gap-lg">
+      <div class="meal-grid">
+        <app-card *ngFor="let type of ['breakfast', 'lunch', 'dinner', 'snack']" class="glass-card meal-card" [hoverable]="true">
+          <div class="flex-column gap-md">
+            <div class="flex-row justify-between items-center">
+              <div class="flex-row items-center gap-sm">
+                <div class="meal-title">
+                  <span class="emoji">{{ getMealIcon(type) }}</span>
+                  <span>{{ type | titlecase }}</span>
+                </div>
+              </div>
+              <span class="text-sm font-black text-primary">{{ (type === 'breakfast' ? getBreakfastCalories() : type ===
+                'lunch' ? getLunchCalories() : type === 'dinner' ? getDinnerCalories() : getSnackCalories()) | number }}
+                <small>kcal</small></span>
+            </div>
+
+            <div class="meal-list-container">
+              <div
+                *ngFor="let meal of (type === 'breakfast' ? getBreakfastMeals() : type === 'lunch' ? getLunchMeals() : type === 'dinner' ? getDinnerMeals() : getSnackMeals())"
+                class="flex-row justify-between items-center meal-item premium-meal">
+                <div class="flex-column">
+                  <span class="meal-name">{{ meal.foodName }}</span>
+                  <span class="meal-macros">P: {{ meal.protein }}g • C: {{ meal.carbohydrates
+                    }}g • F: {{ meal.fats }}g</span>
+                </div>
+                <span class="text-xs font-bold text-muted">{{ meal.calories }} kcal</span>
+              </div>
+
+              <div
+                *ngIf="(type === 'breakfast' ? getBreakfastMeals() : type === 'lunch' ? getLunchMeals() : type === 'dinner' ? getDinnerMeals() : getSnackMeals()).length === 0"
+                class="flex-column items-center justify-center empty-meals">
+                <div class="empty-state">
+                  <span>🍽️</span>
+                  <p>No meals yet</p>
+                </div>
+              </div>
+            </div>
+
+            <app-button variant="glass" size="small" class="full-width-log-btn" (click)="logMeal($any(type))">
+              <span class="material-icons">add</span>
+              Log {{ type }}
+            </app-button>
+          </div>
+        </app-card>
+      </div>
+    </main>
+
+    <!-- Right Sidebar: Daily Summary -->
+    <aside class="summary-container">
+      <app-card class="glass-card summary-card premium-summary full-height">
+
+        <div class="summary-content">
+
+  <!-- HEADER -->
+  <div class="summary-header">
+    <h3>Today's Intake</h3>
+    <span class="goal">
+      {{ totalCalories }} / {{ dailyGoals.calories }} kcal
+    </span>
+  </div>
+
+  <!-- PROGRESS RING -->
+  <div class="progress-wrapper">
+
+    <div class="progress-circle"
+         [style.--progress]="getCalorieProgress()">
+
+      <div class="inner">
+        <span class="value">{{ totalCalories }}</span>
+        <span class="label">kcal</span>
+      </div>
+
+    </div>
+
+    <!-- Glow effect -->
+    <div class="ring-glow"></div>
+
+  </div>
+
+  <!-- MACRO BARS -->
+  <div class="macro-bars">
+
+    <div class="macro-row">
+      <div class="macro-info">
+        <span>Protein</span>
+        <span>{{ totalProtein }}g</span>
+      </div>
+      <div class="bar">
+        <div class="fill protein"
+             [style.width.%]="(totalProtein / dailyGoals.protein) * 100">
+        </div>
+      </div>
+    </div>
+
+    <div class="macro-row">
+      <div class="macro-info">
+        <span>Carbs</span>
+        <span>{{ totalCarbs }}g</span>
+      </div>
+      <div class="bar">
+        <div class="fill carbs"
+             [style.width.%]="(totalCarbs / dailyGoals.carbohydrates) * 100">
+        </div>
+      </div>
+    </div>
+
+    <div class="macro-row">
+      <div class="macro-info">
+        <span>Fats</span>
+        <span>{{ totalFats }}g</span>
+      </div>
+      <div class="bar">
+        <div class="fill fats"
+             [style.width.%]="(totalFats / dailyGoals.fats) * 100">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+      </app-card>
+    </aside>
+  </div>
+
+  <div *ngIf="loading" class="loading-overlay">
+    <app-spinner></app-spinner>
+  </div>
+
+  <div *ngIf="showForm" class="modal-overlay" (click)="toggleAddMeal()">
+    <div class="modal-panel" (click)="$event.stopPropagation()">
+      <div class="flex-row justify-between items-center nutrition-modal-header">
+        <h3 class="text-lg font-bold">Log Meal</h3>
+        <button class="icon-action-btn" (click)="toggleAddMeal()" title="Close">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+
+      <app-nutrition-entry-form [mealType]="prefilledMealType" [prefillFood]="prefilledFood || undefined"
+        (submitted)="onMealSubmitted($event)" (cancelled)="toggleAddMeal()"></app-nutrition-entry-form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,178 @@
+<div class="container">
+  <header class="page-header flex-row justify-between items-end">
+    <div class="flex-column">
+      <h1 class="page-title text-4xl font-black">Fitness Goals</h1>
+      <p class="page-subtitle text-muted">
+        Define your path and track your ascent to peak performance.
+      </p>
+    </div>
+
+    <app-button variant="primary" size="large" class="cta-btn" (click)="toggleCreateForm()">
+      <span class="material-icons">add</span>
+      New Goal
+    </app-button>
+  </header>
+
+  <!-- STATS -->
+  <div class="grid grid-cols-4 gap-lg stats-row">
+
+    <app-card class="glass-card stat-card" [hoverable]="true">
+      <div class="stat-inner">
+        <div class="stat-icon primary">
+          <span class="material-icons">flag</span>
+        </div>
+        <div>
+          <h2>{{ totalGoals }}</h2>
+          <p>Total Goals</p>
+        </div>
+      </div>
+    </app-card>
+
+    <app-card class="glass-card stat-card" [hoverable]="true">
+      <div class="stat-inner">
+        <div class="stat-icon accent">
+          <span class="material-icons">bolt</span>
+        </div>
+        <div>
+          <h2>{{ activeGoals }}</h2>
+          <p>Active</p>
+        </div>
+      </div>
+    </app-card>
+
+    <app-card class="glass-card stat-card" [hoverable]="true">
+      <div class="stat-inner">
+        <div class="stat-icon success">
+          <span class="material-icons">check_circle</span>
+        </div>
+        <div>
+          <h2>{{ completedGoals }}</h2>
+          <p>Completed</p>
+        </div>
+      </div>
+    </app-card>
+
+    <app-card class="glass-card stat-card" [hoverable]="true">
+      <div class="stat-inner">
+        <div class="stat-icon warning">
+          <span class="material-icons">trending_up</span>
+        </div>
+        <div>
+          <h2>{{ averageProgress }}%</h2>
+          <p>Avg Progress</p>
+        </div>
+      </div>
+    </app-card>
+
+  </div>
+
+  <!-- FILTER -->
+  <div class="filter-bar goals-filter-bar">
+    <app-button *ngFor="let filter of ['all','active','completed','archived']"
+      [variant]="currentFilter === filter ? 'primary' : 'glass'" size="small" (click)="filterGoals($any(filter))">
+      {{ filter | titlecase }}
+    </app-button>
+  </div>
+
+  <!-- GOALS -->
+  <div class="goal-card" *ngFor="let goal of filteredGoals" (click)="viewGoalDetail(goal)">
+
+    <!-- LEFT -->
+    <div class="goal-left">
+
+      <div class="goal-icon-box">
+        {{ goal.icon }}
+      </div>
+
+      <div class="goal-content">
+        <h3>{{ goal.name }}</h3>
+
+        <div class="goal-sub">
+          <span>{{ goal.current }} / {{ goal.target }}</span>
+          <span class="dot"></span>
+          <span>{{ goal.deadline | date:'mediumDate' }}</span>
+        </div>
+
+        <p class="goal-feedback">
+          {{ getFeedback(goal) }}
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="goal-right">
+
+      <!-- PROGRESS -->
+      <div class="goal-progress">
+        <div class="progress-ring">
+          <svg viewBox="0 0 36 36">
+            <path class="bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831" />
+            <path class="progress" [attr.stroke-dasharray]="goal.progress + ', 100'"
+              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831" />
+          </svg>
+          <span>{{ goal.progress }}%</span>
+        </div>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="goal-actions" (click)="$event.stopPropagation()">
+
+        <!-- EDIT -->
+        <button class="action-btn" data-tip="Edit goal" (click)="editGoal(goal)">
+          <span class="material-icons">edit</span>
+        </button>
+
+        <!-- COMPLETE -->
+        <button class="action-btn" data-tip="Mark as completed"
+          [disabled]="goal.progress >= 100 || goal.status !== 'active'" (click)="completeGoal(goal)">
+          <span class="material-icons">check_circle</span>
+        </button>
+
+        <!-- ARCHIVE OR UNARCHIVE (ONLY ONE VISIBLE) -->
+        <button *ngIf="goal.status !== 'archived'" class="action-btn" data-tip="Archive goal"
+          [disabled]="goal.progress >= 100 || goal.status !== 'active'" (click)="archiveGoal(goal)">
+          <span class="material-icons">archive</span>
+        </button>
+
+        <button *ngIf="goal.status === 'archived'" class="action-btn" data-tip="Unarchive goal"
+          (click)="unarchiveGoal(goal)">
+          <span class="material-icons">unarchive</span>
+        </button>
+
+        <!-- DELETE -->
+        <button class="action-btn danger" data-tip="Delete goal" (click)="deleteGoal(goal)">
+          <span class="material-icons">delete</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EMPTY -->
+  <div *ngIf="!loading && filteredGoals.length === 0" class="empty-state-container">
+    <div class="empty-icon-circle">
+      <span class="material-icons">track_changes</span>
+    </div>
+    <h3>No goals yet</h3>
+  </div>
+
+  <!-- CREATE FORM MODAL -->
+  <div *ngIf="showCreateForm" class="modal-overlay" (click)="toggleCreateForm()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ editingGoal ? 'Edit Goal' : 'New Goal' }}</h2>
+        <button class="close-btn" (click)="toggleCreateForm()">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+      <app-goal-form
+        [editingGoal]="editingGoal"
+        (submitted)="onGoalSubmitted($event)"
+        (cancelled)="toggleCreateForm()">
+      </app-goal-form>
+    </div>
+  </div>
+</div>

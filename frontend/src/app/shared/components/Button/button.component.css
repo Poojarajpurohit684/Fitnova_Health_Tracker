@@ -1,0 +1,179 @@
+/* ============================================================================
+   Modern Button Component Styles - Refined for Fit-Nova
+   ============================================================================ */
+
+:host ::ng-deep .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-family-sans);
+  font-weight: var(--typography-weight-semibold);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--easing-smooth);
+  appearance: none;
+  outline: none;
+  min-width: 44px;
+  user-select: none;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: var(--typography-letter-spacing-wide);
+}
+
+/* SIZES */
+:host ::ng-deep .btn-small { 
+  padding: var(--padding-button-sm); 
+  min-height: 36px; 
+  font-size: var(--typography-body-xs-size);
+  min-width: 36px;
+}
+:host ::ng-deep .btn-medium { 
+  padding: var(--padding-button-md); 
+  min-height: 48px; 
+  font-size: var(--typography-body-sm-size);
+  min-width: 48px;
+}
+:host ::ng-deep .btn-large { 
+  padding: var(--padding-button-lg); 
+  min-height: 56px; 
+  font-size: var(--typography-body-md-size);
+  border-radius: var(--radius-lg);
+  min-width: 56px;
+}
+
+/* Responsive button sizing */
+@media (max-width: 768px) {
+  :host ::ng-deep .btn-small {
+    min-height: 40px;
+    min-width: 40px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  :host ::ng-deep .btn-medium {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.625rem 1rem;
+  }
+
+  :host ::ng-deep .btn-large {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :host ::ng-deep .btn-small {
+    min-height: 36px;
+    min-width: 36px;
+    padding: 0.375rem 0.625rem;
+    font-size: 0.75rem;
+  }
+
+  :host ::ng-deep .btn-medium {
+    min-height: 40px;
+    min-width: 40px;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  :host ::ng-deep .btn-large {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* FULL WIDTH */
+:host ::ng-deep .btn-full-width {
+  width: 100%;
+}
+
+/* PRIMARY VARIANT */
+:host ::ng-deep .btn-primary {
+  background: var(--color-primary-base);
+  color: #FFFFFF;
+}
+
+:host ::ng-deep .btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), var(--glow-primary);
+}
+
+/* SECONDARY VARIANT */
+:host ::ng-deep .btn-secondary {
+  background: var(--color-bg-surface);
+  border-color: var(--color-border-strong);
+  color: var(--color-text-main);
+}
+
+:host ::ng-deep .btn-secondary:hover:not(:disabled) {
+  border-color: var(--color-primary-base);
+  color: var(--color-primary-light);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* GLASS VARIANT */
+:host ::ng-deep .btn-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  color: var(--color-text-main);
+}
+
+:host ::ng-deep .btn-glass:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-border-strong);
+}
+
+/* DESTRUCTIVE VARIANT */
+:host ::ng-deep .btn-destructive {
+  background: var(--color-error);
+  color: #FFFFFF;
+}
+
+:host ::ng-deep .btn-destructive:hover:not(:disabled) {
+  filter: brightness(1.1);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+/* DISABLED STATE */
+:host ::ng-deep .btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(0.8);
+}
+
+/* LOADING STATE */
+:host ::ng-deep .btn-loading {
+  color: transparent !important;
+}
+
+:host ::ng-deep .btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #FFFFFF;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ICON STYLING */
+:host ::ng-deep .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+}

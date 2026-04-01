@@ -1,0 +1,8 @@
+<span [class]="badgeClasses" role="status">
+  <span class="badge-content">
+    <ng-content></ng-content>
+  </span>
+  <button *ngIf="closeable" class="badge-close" type="button" aria-label="Remove badge" (click)="handleClose($event)">
+    <span class="material-icons">close</span>
+  </button>
+</span>

@@ -1,0 +1,12 @@
+<div class="empty-state">
+  <div class="empty-state-illustration" *ngIf="illustration">
+    <img [src]="illustration" [alt]="illustrationAlt" class="illustration-image" />
+  </div>
+  <h2 class="empty-state-message" *ngIf="message">{{ message }}</h2>
+  <p class="empty-state-description" *ngIf="description">{{ description }}</p>
+  <div class="empty-state-cta" *ngIf="ctaText">
+    <app-button variant="primary" size="md" [disabled]="ctaDisabled" (onClick)="onCtaClick()">
+      {{ ctaText }}
+    </app-button>
+  </div>
+</div>

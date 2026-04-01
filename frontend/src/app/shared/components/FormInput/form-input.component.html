@@ -1,0 +1,60 @@
+<div class="form-input-wrapper" [ngClass]="className">
+  <!-- Label -->
+  <label *ngIf="label" [for]="inputId" class="form-label">
+    {{ label }}
+    <span *ngIf="required" class="form-label-required" aria-label="required">*</span>
+  </label>
+
+  <!-- Input container with icons -->
+  <div class="form-input-container">
+    <!-- Input element -->
+    <input
+      [id]="inputId"
+      [class]="getInputClasses()"
+      [type]="getInputType()"
+      [placeholder]="placeholder"
+      [disabled]="disabled"
+      [required]="required"
+      [value]="value"
+      [attr.aria-label]="ariaLabel || label"
+      [attr.aria-describedby]="getAriaDescribedBy()"
+      [attr.aria-invalid]="validationState === 'invalid'"
+      (input)="onInputChange($event)"
+      (focus)="onInputFocus()"
+      (blur)="onInputBlur()"
+    />
+    
+    <!-- Password visibility toggle button -->
+    <button
+      *ngIf="type === 'password'"
+      type="button"
+      class="password-toggle"
+      [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'"
+      (click)="togglePasswordVisibility()"
+      [disabled]="disabled"
+    >
+      <span class="material-icons" *ngIf="!showPassword">visibility</span>
+      <span class="material-icons" *ngIf="showPassword">visibility_off</span>
+    </button>
+  </div>
+
+  <!-- Error message -->
+  <div
+    *ngIf="errorMessage && validationState === 'invalid'"
+    [id]="errorId"
+    class="form-error"
+    role="alert"
+  >
+    {{ errorMessage }}
+  </div>
+
+  <!-- Helper text -->
+  <div
+    *ngIf="helperText && !errorMessage"
+    [id]="helperId"
+    class="form-helper-text"
+  >
+    {{ helperText }}
+  </div>
+</div>
+

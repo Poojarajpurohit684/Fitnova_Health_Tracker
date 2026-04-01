@@ -1,0 +1,33 @@
+<div #dropdownMenu [class]="dropdownClasses" role="combobox" [attr.aria-expanded]="isOpen">
+  <!-- Dropdown trigger button -->
+  <button
+    class="dropdown-trigger"
+    type="button"
+    (click)="toggleDropdown()"
+    [attr.aria-haspopup]="true"
+    [attr.aria-expanded]="isOpen"
+  >
+    <span class="dropdown-trigger-text">
+      <ng-content></ng-content>
+    </span>
+    <span class="material-icons dropdown-trigger-icon">arrow_drop_down</span>
+  </button>
+
+  <!-- Dropdown menu -->
+  <div class="dropdown-menu" role="listbox" *ngIf="isOpen">
+    <!-- Menu items -->
+    <button
+      *ngFor="let item of items; let i = index"
+      [class]="getItemClasses(item, i)"
+      type="button"
+      role="option"
+      [attr.aria-selected]="isFocused(i)"
+      [disabled]="item.disabled"
+      (click)="selectItem(item)"
+      (mouseenter)="focusedIndex = i"
+    >
+      {{ item.label }}
+    </button>
+  </div>
+</div>
+

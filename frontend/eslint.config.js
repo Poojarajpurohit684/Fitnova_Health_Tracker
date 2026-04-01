@@ -1,0 +1,65 @@
+// @ts-check
+const eslint = require("@eslint/js");
+const { defineConfig } = require("eslint/config");
+const tseslint = require("typescript-eslint");
+const angular = require("angular-eslint");
+
+module.exports = defineConfig([
+  {
+    ignores: ["**/*.spec.ts", "**/*.test.ts"],
+    files: ["**/*.ts"],
+    extends: [
+      eslint.configs.recommended,
+      tseslint.configs.recommended,
+      tseslint.configs.stylistic,
+      angular.configs.tsRecommended,
+    ],
+    processor: angular.processInlineTemplates,
+    rules: {
+      "@angular-eslint/no-empty-lifecycle-method": "off",
+      "@angular-eslint/no-output-on-prefix": "off",
+      "@angular-eslint/prefer-inject": "off",
+      "@angular-eslint/directive-selector": [
+        "error",
+        {
+          type: "attribute",
+          prefix: "app",
+          style: "camelCase",
+        },
+      ],
+      "@angular-eslint/component-selector": [
+        "error",
+        {
+          type: "element",
+          prefix: "app",
+          style: "kebab-case",
+        },
+      ],
+      "@typescript-eslint/array-type": "off",
+      "@typescript-eslint/class-literal-property-style": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-inferrable-types": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/consistent-indexed-object-style": "off",
+      "@typescript-eslint/consistent-generic-constructors": "off",
+    },
+  },
+  {
+    ignores: ["**/*.spec.html", "**/*.test.html"],
+    files: ["**/*.html"],
+    extends: [
+      angular.configs.templateRecommended,
+      angular.configs.templateAccessibility,
+    ],
+    rules: {
+      "@angular-eslint/template/prefer-control-flow": "off",
+      "@angular-eslint/template/no-negated-async": "off",
+      "@angular-eslint/template/click-events-have-key-events": "off",
+      "@angular-eslint/template/interactive-supports-focus": "off",
+      "@angular-eslint/template/label-has-associated-control": "off",
+      "@angular-eslint/template/alt-text": "off",
+      "@angular-eslint/template/role-has-required-aria": "off",
+    },
+  }
+]);

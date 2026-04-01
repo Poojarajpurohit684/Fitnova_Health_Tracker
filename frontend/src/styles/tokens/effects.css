@@ -1,0 +1,46 @@
+/* ============================================================================
+   Fit-Nova Design System - Refined Effects Tokens
+   ============================================================================ */
+
+:root {
+  /* ========================================================================
+     SHADOW TOKENS - Refined for professional UI
+     ======================================================================== */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  
+  /* ========================================================================
+     GLOW TOKENS - Sophisticated accentuation
+     ======================================================================== */
+  --glow-primary: 0 0 20px -5px var(--color-primary-glow);
+  --glow-accent: 0 0 20px -5px rgba(6, 182, 212, 0.3);
+
+  /* ========================================================================
+     BORDER RADIUS TOKENS - Modern standard
+     ======================================================================== */
+  --radius-xs: 0.25rem;  /* 4px */
+  --radius-sm: 0.5rem;   /* 8px */
+  --radius-md: 0.75rem;  /* 12px */
+  --radius-lg: 1rem;     /* 16px */
+  --radius-xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+
+  /* ========================================================================
+     ANIMATION TOKENS - Fluid movement
+     ======================================================================== */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* ========================================================================
+     GLASSMORPHISM TOKENS - Professional depth
+     ======================================================================== */
+  --glass-blur: blur(12px);
+  --glass-bg: rgba(15, 23, 42, 0.6);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+}

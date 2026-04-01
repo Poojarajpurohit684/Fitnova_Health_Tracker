@@ -1,0 +1,151 @@
+<div class="container">
+  <!-- Header -->
+  <header class="page-header">
+    <h1 class="page-title">Social Hub</h1>
+    <p class="page-subtitle">Connect with your community and share your fitness journey.</p>
+  </header>
+
+  <div class="social-layout-grid">
+    <!-- Left Sidebar: Profile & Search -->
+    <aside class="flex-column gap-lg">
+      <!-- User Profile Card -->
+      <app-card *ngIf="userProfile" class="glass-card" [hoverable]="false">
+        <div class="flex-column items-center text-center gap-md">
+          <div class="avatar-wrapper">
+            <img [src]="userProfile.avatarUrl || 'assets/default-avatar.png'" 
+                 class="user-avatar">
+            <div class="online-dot"></div>
+          </div>
+          
+          <div class="flex-column">
+            <h2 class="text-xl font-bold">{{ userProfile.name }}</h2>
+            <p class="text-muted text-sm">{{ userProfile.bio || 'Fitness Enthusiast' }}</p>
+          </div>
+
+          <div class="flex-row justify-center gap-lg w-full profile-stats-row">
+            <div class="flex-column">
+              <span class="font-black text-lg">{{ userProfile.statistics.workouts }}</span>
+              <span class="text-dim text-xs uppercase font-bold">Workouts</span>
+            </div>
+            <div class="flex-column">
+              <span class="font-black text-lg">{{ userProfile.statistics.followers }}</span>
+              <span class="text-dim text-xs uppercase font-bold">Followers</span>
+            </div>
+          </div>
+
+          <app-button variant="primary" class="full-width-btn">View Profile</app-button>
+        </div>
+      </app-card>
+
+      <!-- Challenges Card -->
+      <app-card class="glass-card" [hoverable]="true">
+        <h3 class="text-md font-bold uppercase tracking-wider text-muted section-title">Live Challenges</h3>
+        <div class="flex-column gap-md">
+          <div class="flex-row items-center gap-sm" *ngFor="let challenge of communityChallenges">
+            <div class="challenge-icon-box">
+              <span class="material-icons">{{ challenge.icon }}</span>
+            </div>
+            <div class="flex-column flex-1 gap-xs">
+              <p class="text-sm font-semibold">{{ challenge.name }}</p>
+              <app-progress-bar [value]="challenge.progress" size="sm" mode="determinate"></app-progress-bar>
+            </div>
+          </div>
+        </div>
+      </app-card>
+    </aside>
+
+    <!-- Main Feed -->
+    <main class="flex-column gap-lg">
+      <!-- Post Composer -->
+      <app-card class="glass-card" [hoverable]="false">
+        <div class="flex-column gap-md">
+          <textarea
+            class="post-composer-input"
+            placeholder="Share your progress, {{ userProfile.name }}..."></textarea>
+          <div class="flex-row justify-between items-center">
+            <div class="flex-row gap-md text-muted">
+              <span class="material-icons clickable composer-icon">image</span>
+              <span class="material-icons clickable composer-icon">videocam</span>
+              <span class="material-icons clickable composer-icon">poll</span>
+            </div>
+            <app-button variant="primary">Post Update</app-button>
+          </div>
+        </div>
+      </app-card>
+
+      <!-- Activity Feed -->
+      <div class="flex-column gap-md">
+        <app-card *ngFor="let activity of filteredActivities" class="glass-card" [hoverable]="true">
+          <div class="flex-column gap-md">
+            <div class="flex-row items-center justify-between">
+              <div class="flex-row items-center gap-sm">
+                <img [src]="activity.userAvatarUrl" class="activity-avatar">
+                <div class="flex-column">
+                  <span class="font-bold text-sm">{{ activity.userName }}</span>
+                  <span class="text-xs text-dim">{{ formatTimestamp(activity.timestamp) }}</span>
+                </div>
+              </div>
+              <div class="activity-type-pill">
+                {{ activity.activityType }}
+              </div>
+            </div>
+            
+            <p class="text-sm activity-description">{{ activity.description }}</p>
+
+            <div class="flex-row items-center gap-lg activity-actions-row">
+              <button class="flex-row items-center gap-xs clickable like-btn"
+                type="button"
+                (click)="likeActivity(activity)">
+                <span class="material-icons" [style.color]="activity.liked ? 'var(--color-error)' : 'inherit'">
+                  {{ activity.liked ? 'favorite' : 'favorite_border' }}
+                </span>
+                {{ activity.likes }}
+              </button>
+              <button class="flex-row items-center gap-xs clickable comment-btn"
+                type="button"
+                (click)="openCommentsModal(activity)">
+                <span class="material-icons">chat_bubble_outline</span>
+                {{ activity.comments }}
+              </button>
+              <button class="flex-row items-center gap-xs share-btn"
+                type="button">
+                <span class="material-icons">share</span>
+              </button>
+            </div>
+          </div>
+        </app-card>
+      </div>
+    </main>
+  </div>
+
+  <!-- Comments Modal -->
+  <div *ngIf="showCommentsModal" class="modal-overlay" (click)="closeCommentsModal()">
+    <div class="modal-panel" (click)="$event.stopPropagation()">
+      <div class="flex-row justify-between items-center modal-header-row">
+        <h3 class="text-lg font-bold">Comments</h3>
+        <button class="icon-action-btn" (click)="closeCommentsModal()" title="Close">
+          <span class="material-icons">close</span>
+        </button>
+      </div>
+
+      <div *ngIf="selectedActivityForComments as a" class="flex-column gap-sm comments-source-card">
+        <div class="flex-row items-center gap-sm">
+          <img *ngIf="a.userProfilePicture" [src]="a.userProfilePicture" class="comment-user-avatar">
+          <div class="flex-column">
+            <span class="font-bold text-sm">{{ a.userName }}</span>
+            <span class="text-xs text-dim">{{ formatTimestamp(a.timestamp) }}</span>
+          </div>
+        </div>
+        <p class="text-sm activity-description">{{ a.description }}</p>
+      </div>
+
+      <div class="flex-column gap-sm">
+        <textarea class="comment-input" [(ngModel)]="newComment" placeholder="Write a comment..."></textarea>
+        <app-button variant="primary" (click)="addComment()" [disabled]="!newComment.trim()">
+          <span class="material-icons">send</span>
+          Add Comment
+        </app-button>
+      </div>
+    </div>
+  </div>
+</div>

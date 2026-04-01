@@ -1,0 +1,115 @@
+.logo-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  &.logo-small {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.logo-medium {
+    width: 64px;
+    height: 64px;
+  }
+
+  &.logo-large {
+    width: 128px;
+    height: 128px;
+  }
+
+  // Horizontal lockup adjustments
+  &.logo-horizontal-lockup {
+    &.logo-small {
+      width: 120px;
+      height: 32px;
+    }
+
+    &.logo-medium {
+      width: 240px;
+      height: 64px;
+    }
+
+    &.logo-large {
+      width: 480px;
+      height: 128px;
+    }
+  }
+
+  // Vertical lockup adjustments
+  &.logo-vertical-lockup {
+    &.logo-small {
+      width: 40px;
+      height: 70px;
+    }
+
+    &.logo-medium {
+      width: 80px;
+      height: 140px;
+    }
+
+    &.logo-large {
+      width: 160px;
+      height: 280px;
+    }
+  }
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  // Smooth transitions for color changes
+  transition: color 200ms ease-out;
+
+  // Ensure SVG respects parent dimensions
+  max-width: 100%;
+  max-height: 100%;
+}
+
+// Color scheme specific styles
+.logo-container {
+  &.logo-primary {
+    color: #FF6B6B;
+  }
+
+  &.logo-monochrome {
+    color: #111827;
+  }
+
+  &.logo-inverted {
+    color: #FFFFFF;
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .logo-container {
+    &.logo-monochrome {
+      color: #FFFFFF;
+    }
+  }
+}
+
+// Accessibility: Focus visible state
+.logo-container:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+// Hover state for interactive contexts
+button .logo-container,
+a .logo-container {
+  transition: opacity 150ms ease-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}

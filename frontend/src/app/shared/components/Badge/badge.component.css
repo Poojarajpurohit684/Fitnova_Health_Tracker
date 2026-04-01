@@ -1,0 +1,136 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  white-space: nowrap;
+  gap: 4px;
+}
+
+/* Size variants */
+.badge-sm {
+  padding: 4px 8px;
+  height: 20px;
+  font-size: 11px;
+}
+
+.badge-md {
+  padding: 6px 12px;
+  height: 24px;
+  font-size: 12px;
+}
+
+.badge-lg {
+  padding: 8px 16px;
+  height: 28px;
+  font-size: 13px;
+}
+
+/* Color variants */
+.badge-primary {
+  background-color: var(--color-primary-base);
+  color: #FFFFFF;
+}
+
+.badge-secondary {
+  background-color: var(--color-secondary-base);
+  color: #FFFFFF;
+}
+
+.badge-accent {
+  background-color: var(--color-accent-base);
+  color: #FFFFFF;
+}
+
+.badge-success {
+  background-color: var(--color-semantic-success-base);
+  color: #FFFFFF;
+}
+
+.badge-warning {
+  background-color: var(--color-semantic-warning-base);
+  color: #FFFFFF;
+}
+
+.badge-error {
+  background-color: var(--color-semantic-error-base);
+  color: #FFFFFF;
+}
+
+.badge-info {
+  background-color: var(--color-semantic-info-base);
+  color: #FFFFFF;
+}
+
+/* Badge content */
+.badge-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Close button */
+.badge-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 200ms ease;
+}
+
+.badge-close:hover {
+  opacity: 1;
+}
+
+.badge-close:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .badge-primary {
+    background-color: var(--color-primary-base);
+    color: #FFFFFF;
+  }
+
+  .badge-secondary {
+    background-color: var(--color-secondary-base);
+    color: #FFFFFF;
+  }
+
+  .badge-accent {
+    background-color: var(--color-accent-base);
+    color: #FFFFFF;
+  }
+
+  .badge-success {
+    background-color: var(--color-semantic-success-base);
+    color: #FFFFFF;
+  }
+
+  .badge-warning {
+    background-color: var(--color-semantic-warning-base);
+    color: #FFFFFF;
+  }
+
+  .badge-error {
+    background-color: var(--color-semantic-error-base);
+    color: #FFFFFF;
+  }
+
+  .badge-info {
+    background-color: var(--color-semantic-info-base);
+    color: #FFFFFF;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "FitNova Pro",
+  "short_name": "FitNova",
+  "theme_color": "#6366f1",
+  "background_color": "#020617",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/logos/fitnova-mark-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

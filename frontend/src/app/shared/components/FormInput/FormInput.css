@@ -1,0 +1,132 @@
+/* ============================================================================
+   Modern FormInput Component Styles - Refined for Fit-Nova
+   ============================================================================ */
+
+.form-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  font-weight: var(--typography-weight-semibold);
+  font-size: var(--typography-body-xs-size);
+  color: var(--color-text-muted);
+  letter-spacing: var(--typography-letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.form-label-required {
+  color: var(--color-error);
+  margin-left: var(--spacing-2xs);
+}
+
+.form-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--padding-input);
+  min-height: 48px;
+  font-family: var(--font-family-sans);
+  font-size: var(--typography-body-sm-size);
+  color: var(--color-text-main);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--easing-smooth);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-text-dim);
+}
+
+.form-input:focus {
+  border-color: var(--color-primary-base);
+  background: var(--color-bg-main);
+  box-shadow: var(--glow-primary);
+}
+
+.form-input-password {
+  padding-right: var(--spacing-3xl);
+}
+
+/* VALIDATION STATES */
+.form-input-valid {
+  border-color: var(--color-success);
+}
+
+.form-input-invalid {
+  border-color: var(--color-error);
+}
+
+/* PASSWORD TOGGLE */
+.password-toggle {
+  position: absolute;
+  right: var(--spacing-md);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  color: var(--color-text-dim);
+  transition: color var(--duration-fast);
+}
+
+.password-toggle:hover {
+  color: var(--color-text-main);
+}
+
+/* MESSAGES */
+.form-error {
+  font-size: var(--typography-body-xs-size);
+  color: var(--color-error);
+  font-weight: var(--typography-weight-medium);
+  margin-top: var(--spacing-2xs);
+}
+
+.form-helper-text {
+  font-size: var(--typography-body-xs-size);
+  color: var(--color-text-dim);
+  margin-top: var(--spacing-2xs);
+}
+
+/* ================= DATE INPUT STYLING ================= */
+
+/* Base date input */
+.form-input[type="date"] {
+  color-scheme: dark; /* VERY IMPORTANT - fixes calendar theme */
+}
+
+/* Calendar icon */
+.form-input[type="date"]::-webkit-date-picker-indicator {
+  filter: invert(1) brightness(2);
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.form-input[type="date"]::-webkit-date-picker-indicator:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Fix text visibility */
+.form-input[type="date"]::-webkit-datetime-edit {
+  color: var(--color-text-main);
+}
+
+/* Placeholder (dd-mm-yyyy) */
+.form-input[type="date"]::-webkit-datetime-edit-text,
+.form-input[type="date"]::-webkit-datetime-edit-month-field,
+.form-input[type="date"]::-webkit-datetime-edit-day-field,
+.form-input[type="date"]::-webkit-datetime-edit-year-field {
+  color: var(--color-text-main);
+}

@@ -1,0 +1,49 @@
+/* ============================================================================
+   Fit-Nova Design System - Typography Tokens
+   ============================================================================ */
+
+:root {
+  /* ========================================================================
+     FONT FAMILY TOKENS
+     ======================================================================== */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ========================================================================
+     FONT WEIGHT TOKENS
+     ======================================================================== */
+  --typography-weight-light: 300;
+  --typography-weight-normal: 400;
+  --typography-weight-medium: 500;
+  --typography-weight-semibold: 600;
+  --typography-weight-bold: 700;
+  --typography-weight-black: 900;
+
+  /* ========================================================================
+     FONT SIZE TOKENS - Fluid Type Scale (Minor Third)
+     ======================================================================== */
+  --typography-h1-size: 3rem;        /* 48px */
+  --typography-h2-size: 2.25rem;     /* 36px */
+  --typography-h3-size: 1.5rem;      /* 24px */
+  --typography-h4-size: 1.25rem;     /* 20px */
+  
+  --typography-body-lg-size: 1.125rem; /* 18px */
+  --typography-body-md-size: 1rem;     /* 16px */
+  --typography-body-sm-size: 0.875rem; /* 14px */
+  --typography-body-xs-size: 0.75rem;  /* 12px */
+
+  /* ========================================================================
+     LINE HEIGHT TOKENS
+     ======================================================================== */
+  --typography-line-height-tight: 1.2;
+  --typography-line-height-normal: 1.5;
+  --typography-line-height-relaxed: 1.625;
+
+  /* ========================================================================
+     LETTER SPACING TOKENS
+     ======================================================================== */
+  --typography-letter-spacing-tight: -0.02em;
+  --typography-letter-spacing-normal: 0;
+  --typography-letter-spacing-wide: 0.025em;
+  --typography-letter-spacing-widest: 0.05em;
+}
