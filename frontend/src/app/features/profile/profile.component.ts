@@ -6,6 +6,8 @@ import { NotificationService } from '../../core/services/notification.service';
 import { CardComponent } from '../../shared/components/Card/card.component';
 import { ButtonComponent } from '../../shared/components/Button/button.component';
 import { FormInputComponent } from '../../shared/components/FormInput/form-input.component';
+import { AuthService } from '../../core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -25,6 +27,16 @@ import { FormInputComponent } from '../../shared/components/FormInput/form-input
           <span class="material-icons">{{ isEditing ? 'close' : 'edit' }}</span>
           {{ isEditing ? 'Cancel' : 'Edit Profile' }}
         </app-button>
+
+        <div class="mobile-only-logout">
+  <app-button 
+    variant="glass" 
+    class="w-full text-error" 
+    (click)="logout()">
+    <span class="material-icons">logout</span>
+    Sign Out
+  </app-button>
+</div>
       </header>
 
       <div class="profile-layout-grid grid" style="gap: 2rem;">
@@ -221,6 +233,28 @@ import { FormInputComponent } from '../../shared/components/FormInput/form-input
         grid-template-columns: 1fr;
       }
     }
+
+    /* Add this to your ProfileComponent styles */
+.mobile-only-logout {
+  display: none; /* Hidden on Desktop */
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.text-error {
+  color: var(--color-error, #ef4444);
+}
+
+@media (max-width: 1024px) {
+  .mobile-only-logout {
+    display: block; /* Visible on Mobile/Tablet */
+  }
+  
+  /* Ensure the logout button clears the bottom navbar height */
+  .container {
+    padding-bottom: 120px; 
+  }
+}
+
   `]
 })
 export class ProfileComponent implements OnInit {
@@ -231,13 +265,26 @@ export class ProfileComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private stateService: StateService,
-    private notificationService: NotificationService
-  ) {}
+    private notificationService: NotificationService,
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.initializeForm();
     this.loadUserData();
   }
+
+  // Inside ProfileComponent
+logout(): void {
+  this.authService.logout().subscribe({
+    next: () => {
+      this.stateService.reset();
+      this.router.navigate(['/auth/login']);
+    }
+  });
+}
+
 
   private initializeForm(): void {
     this.profileForm = this.fb.group({

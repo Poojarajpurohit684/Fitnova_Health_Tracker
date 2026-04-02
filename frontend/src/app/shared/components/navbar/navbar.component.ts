@@ -53,14 +53,14 @@ import { LogoDisplayComponent } from '../logo-display/logo-display.component';
     <span class="label">Eat</span>
   </a>
 
-  <a routerLink="/analytics" routerLinkActive="active" class="mobile-link">
-    <span class="material-icons">insights</span>
-    <span class="label">Stats</span>
-  </a>
-
   <a routerLink="/goals" routerLinkActive="active" class="mobile-link">
     <span class="material-icons">track_changes</span>
     <span class="label">Goals</span>
+  </a>
+
+  <a routerLink="/analytics" routerLinkActive="active" class="mobile-link">
+    <span class="material-icons">insights</span>
+    <span class="label">Stats</span>
   </a>
 
   <a routerLink="/profile" routerLinkActive="active" class="mobile-link">
