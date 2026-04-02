@@ -212,6 +212,7 @@ import { LogoDisplayComponent } from '../logo-display/logo-display.component';
     @media (max-width: 768px) {
       .navbar-mobile {
         height: 64px;
+        height: auto;
       }
 
       .mobile-link {
@@ -231,6 +232,7 @@ import { LogoDisplayComponent } from '../logo-display/logo-display.component';
     @media (max-width: 480px) {
       .navbar-mobile {
         height: 56px;
+        height: auto;
       }
 
       .mobile-link {
