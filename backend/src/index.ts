@@ -6,7 +6,7 @@ import { connectDB } from './config/database';
 import { logger } from './config/logger';
 import { errorHandler } from './middleware/errorHandler';
 import { rateLimiter, authRateLimiter } from './middleware/rateLimiter';
-import { cacheMiddleware, cache } from './utils/cache';
+import { cacheMiddleware } from './utils/cache';
 
 // Routes
 import authRoutes from './routes/auth';
