@@ -262,6 +262,11 @@ app.use('/api/v1/analytics', (req, _res, next) => {
 });
 
 app.use('/api/v1/analytics', cacheMiddleware(300), analyticsRoutes);
+// Root Endpoint
+app.get("/", (req, res) => {
+  res.send("🚀 FitNova Backend API is running...");
+});
+
 
 // 404 Handler
 app.use((req, res) => {
