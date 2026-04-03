@@ -1,0 +1,425 @@
+{"timestamp":"2026-03-16T06:23:00.681Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T06:23:00.689Z","level":"INFO","message":"✓ Server running on port 3000"}
+{"timestamp":"2026-03-16T06:23:00.690Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T07:25:06.144Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"462ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:25:06.241Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"64ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:25:06.256Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"52ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:25:06.269Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:25:06.273Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:25:24.385Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"37ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:25:56.894Z","level":"INFO","message":"POST /","data":{"status":201,"duration":"90ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:25:57.453Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"38ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:26:03.679Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"44ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:26:14.104Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"49ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:26:17.784Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"58ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:26:25.684Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"54ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:32:46.136Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"5ms","ip":"::1"}}
+{"timestamp":"2026-03-16T07:42:18.024Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T07:42:18.041Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T07:42:18.160Z","level":"INFO","message":"Database disconnected"}
+{"timestamp":"2026-03-16T07:46:28.397Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T07:46:28.402Z","level":"INFO","message":"✓ Server running on port 3000"}
+{"timestamp":"2026-03-16T07:46:28.403Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T07:54:34.936Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T07:54:34.951Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T07:54:35.020Z","level":"INFO","message":"Database disconnected"}
+{"timestamp":"2026-03-16T08:07:19.273Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T08:07:19.277Z","level":"INFO","message":"✓ Server running on port 3000"}
+{"timestamp":"2026-03-16T08:07:19.278Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T08:08:08.419Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"395ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:08.506Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"50ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:08.516Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"47ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:08.522Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:08.528Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:14.247Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"34ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:17.980Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"4ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:17.986Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:17.992Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:17.997Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:20.625Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"46ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:24.359Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:24.372Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"7ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:24.384Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:24.390Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:27.387Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:28.779Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:28.784Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:28.790Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:28.794Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:30.009Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"44ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:30.768Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:30.787Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"3ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:30.797Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:30.816Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:31.865Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"68ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:45.882Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:45.887Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:45.893Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:08:45.898Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:05.358Z","level":"INFO","message":"GET /me","data":{"status":200,"duration":"26ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:05.449Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:05.452Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:05.480Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:05.488Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:14.936Z","level":"INFO","message":"GET /me","data":{"status":304,"duration":"17ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:14.969Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:14.972Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:14.983Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:14.986Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:23.242Z","level":"INFO","message":"GET /me","data":{"status":304,"duration":"23ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:23.280Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:23.284Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:23.294Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:10:23.297Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:14:06.583Z","level":"INFO","message":"GET /me","data":{"status":304,"duration":"41ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:14:06.728Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"78ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:14:06.733Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"52ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:14:06.742Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:14:06.749Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:24:04.067Z","level":"INFO","message":"GET /me","data":{"status":304,"duration":"143ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:24:04.169Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"38ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:24:04.179Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"41ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:24:04.183Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:24:04.185Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:38.177Z","level":"INFO","message":"GET /me","data":{"status":304,"duration":"58ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:38.336Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"48ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:38.345Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"41ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:38.356Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:38.359Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:59.538Z","level":"INFO","message":"GET /me","data":{"status":304,"duration":"18ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:59.604Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:59.607Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:59.615Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:33:59.618Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:15.506Z","level":"INFO","message":"GET /me","data":{"status":304,"duration":"22ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:15.581Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:15.587Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:15.597Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:15.601Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:43.677Z","level":"INFO","message":"GET /me","data":{"status":304,"duration":"19ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:43.705Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:43.710Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:43.720Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:34:43.726Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:35:07.962Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"6ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:35:07.978Z","level":"INFO","message":"GET /me","data":{"status":401,"duration":"12ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:15.047Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"380ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:15.113Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"39ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:15.121Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"36ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:15.129Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:15.131Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:20.077Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"36ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:20.929Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"49ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:21.977Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:28.388Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:29.352Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"37ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:31.154Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"61ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:39:44.854Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T08:47:21.708Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T08:47:21.724Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T08:47:21.787Z","level":"INFO","message":"Database disconnected"}
+{"timestamp":"2026-03-16T10:09:42.607Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T10:09:42.618Z","level":"INFO","message":"✓ Server running on port 3000"}
+{"timestamp":"2026-03-16T10:09:42.620Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T10:31:50.720Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T10:31:50.756Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T10:31:50.837Z","level":"INFO","message":"Database disconnected"}
+{"timestamp":"2026-03-16T10:32:32.266Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T10:32:32.271Z","level":"INFO","message":"✓ Server running on port 3000"}
+{"timestamp":"2026-03-16T10:32:32.271Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T10:45:22.464Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"556ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:45:22.662Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"148ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:45:22.703Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"161ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:45:35.306Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"124ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:45:39.098Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"137ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:45:42.736Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"144ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:45:44.323Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"199ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:45:55.765Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:57:52.685Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"763ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:57:53.060Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"332ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:57:53.063Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"315ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:08.979Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"223ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:14.202Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"148ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:18.574Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"129ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:28.578Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"305ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:30.815Z","level":"INFO","message":"GET /api/v1/analytics/export","data":{"status":404,"duration":"11ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:32.827Z","level":"INFO","message":"GET /export","data":{"status":200,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:36.404Z","level":"INFO","message":"GET /export","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:38.043Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"203ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:39.222Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"162ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:40.096Z","level":"INFO","message":"GET /api/v1/analytics/export","data":{"status":404,"duration":"14ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:40.541Z","level":"INFO","message":"GET /export","data":{"status":200,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:40.779Z","level":"INFO","message":"GET /export","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:42.105Z","level":"INFO","message":"GET /export","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:50.947Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:51.782Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:52.670Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:58:52.675Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:59:44.969Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:59:44.972Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:59:54.068Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T10:59:54.073Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:02.959Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:02.962Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:11.800Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:11.809Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:25.816Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:25.819Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:34.560Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:36.038Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:40.736Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:46.378Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:46.384Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:50.149Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:00:50.152Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:03.914Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:03.917Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:38.647Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:38.659Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:41.292Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:42.934Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:44.482Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:46.159Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"305ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:47.188Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:01:47.873Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:03:59.007Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"259ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:04:00.313Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"10ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:04:00.319Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:14.403Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"480ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:14.602Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"141ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:14.604Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"126ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:16.564Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"153ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:17.465Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:19.003Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"154ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:20.052Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"235ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:23.362Z","level":"INFO","message":"GET /api/v1/analytics/export","data":{"status":404,"duration":"5ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:25.085Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:25.369Z","level":"INFO","message":"GET /export","data":{"status":200,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:05:27.017Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:06:31.626Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:06:31.634Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:10:13.955Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"24ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:10:13.971Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:10:23.128Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"200ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:10:24.757Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"160ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:10:25.960Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"156ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:10:28.616Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:10:41.707Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"127ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:10:41.713Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"119ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:10:44.036Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"5ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:27:54.877Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T11:27:54.915Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T11:27:55.080Z","level":"INFO","message":"Database disconnected"}
+{"timestamp":"2026-03-16T11:28:08.392Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T11:28:08.398Z","level":"INFO","message":"✓ Server running on port 3000"}
+{"timestamp":"2026-03-16T11:28:08.400Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T11:34:55.753Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T11:34:55.801Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T11:34:55.970Z","level":"INFO","message":"Database disconnected"}
+{"timestamp":"2026-03-16T11:35:53.503Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T11:35:53.507Z","level":"INFO","message":"✓ Server running on port 5000"}
+{"timestamp":"2026-03-16T11:35:53.507Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T11:45:12.527Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"541ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:12.909Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"177ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:12.916Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"151ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:15.211Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"111ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:17.081Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"124ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:18.658Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"150ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:20.430Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"167ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:36.784Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:36.792Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"3ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:39.534Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:41.927Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:41.933Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:43.162Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:45.109Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:45:45.111Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:50:45.987Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"169ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:50:45.994Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"112ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:51:05.357Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"8ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:53:31.031Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"457ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:53:31.085Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:53:31.088Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:53:39.087Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"115ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:53:43.878Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"113ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:53:48.628Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"114ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:53:50.026Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"179ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:53:51.896Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:09.356Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:14.090Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"3ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:23.050Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:30.374Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:31.813Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:31.819Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:33.418Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"4ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:34.855Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"168ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:38.836Z","level":"INFO","message":"GET /api/v1/analytics/export","data":{"status":404,"duration":"5ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:40.854Z","level":"INFO","message":"GET /export","data":{"status":200,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:41.213Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"157ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:44.155Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"203ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:45.651Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"171ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:46.472Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"201ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:48.194Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"161ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:57.709Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"170ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:59.059Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"180ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:54:59.618Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"199ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:55:01.814Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"176ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:55:03.568Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:55:24.968Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"4ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:55:39.700Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:56:59.873Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:57:06.883Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:57:08.900Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:57:14.577Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"183ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:57:17.043Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:57:18.225Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:57:19.492Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:57:20.780Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:58:05.471Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:58:10.312Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"187ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:58:42.887Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"182ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:59:22.704Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"137ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:59:23.738Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"110ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:59:25.159Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"94ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:59:33.536Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"112ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:59:33.539Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"106ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:59:36.712Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"5ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:59:52.611Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"437ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:59:52.623Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T11:59:52.627Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:00.102Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:00.111Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"5ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:01.102Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:02.172Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:03.546Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:11.759Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T12:01:16.574Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"412ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:16.593Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:16.596Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:26.433Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:26.437Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:33.994Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:37.273Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"3ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:37.278Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:39.135Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:41.033Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"5ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:01:41.038Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:02:09.397Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T12:02:09.407Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T12:02:09.487Z","level":"INFO","message":"Database disconnected"}
+{"timestamp":"2026-03-16T12:03:44.474Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T12:03:44.478Z","level":"INFO","message":"✓ Server running on port 5000"}
+{"timestamp":"2026-03-16T12:03:44.480Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T12:07:15.004Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T12:07:15.009Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T12:07:15.030Z","level":"INFO","message":"Database disconnected"}
+{"timestamp":"2026-03-16T12:07:39.137Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T12:07:39.143Z","level":"INFO","message":"✓ Server running on port 5000"}
+{"timestamp":"2026-03-16T12:07:39.144Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T12:08:36.151Z","level":"INFO","message":"POST /register","data":{"status":201,"duration":"388ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:08:36.477Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"304ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:11:03.932Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"158ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:11:03.940Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"82ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:12:40.450Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"73ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:12:41.491Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"70ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:12:43.329Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"97ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:12:51.206Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"8ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:12:51.214Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:14:00.308Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"7ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:14:00.315Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:14:12.247Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:14:12.251Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:25:07.493Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"186ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:25:10.337Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"63ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:25:11.170Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"65ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:25:16.065Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:25:16.789Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"101ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:25:16.798Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"90ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:26:17.759Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T12:26:17.772Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T12:26:17.891Z","level":"INFO","message":"Database disconnected"}
+{"timestamp":"2026-03-16T12:37:26.206Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T12:37:26.212Z","level":"INFO","message":"✓ Server running on port 5000"}
+{"timestamp":"2026-03-16T12:37:26.212Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-16T12:38:58.921Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"380ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:38:59.001Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"40ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:38:59.008Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"36ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:01.024Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"30ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:02.444Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"78ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:03.987Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"36ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:05.440Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"69ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:08.737Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:08.742Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:14.776Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:29.604Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"329ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:29.629Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:39:29.633Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:40:00.282Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:40:13.517Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T12:40:32.409Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"52ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:16:09.093Z","level":"INFO","message":"POST /refresh","data":{"status":200,"duration":"77ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:26:29.211Z","level":"INFO","message":"POST /refresh","data":{"status":200,"duration":"56ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:47:39.328Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-16T14:48:10.283Z","level":"INFO","message":"POST /register","data":{"status":201,"duration":"692ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:48:10.670Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"362ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:48:10.735Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"46ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:50:52.661Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:54:05.779Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"553ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:54:05.912Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"52ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:54:05.915Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"36ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:54:08.587Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"64ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:54:09.828Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"30ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:54:16.544Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"32ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:54:18.037Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"74ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:54:28.050Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"3ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:54:38.638Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"3ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:56:52.594Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T14:56:54.343Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:27:06.433Z","level":"INFO","message":"POST /refresh","data":{"status":200,"duration":"21ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:27:19.813Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"74ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:30:48.590Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"27ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:31:01.159Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"4ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:33:16.433Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"149ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:33:19.080Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"33ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:33:27.880Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"56ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:33:48.284Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"50ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:33:48.291Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"43ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:35:17.024Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"44ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:35:22.115Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"17ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:35:22.135Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"3ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:49:03.196Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"139ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:49:03.205Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"52ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:49:23.992Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:49:23.996Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:50:07.182Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:50:07.186Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:50:46.519Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:50:46.523Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:53:20.472Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"4ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:53:20.479Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:59:07.026Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"178ms","ip":"::1"}}
+{"timestamp":"2026-03-16T15:59:07.034Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"52ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:00:42.612Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:00:42.617Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:04:40.452Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"103ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:04:40.458Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"33ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:06:22.870Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:06:22.873Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:07:08.179Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:07:08.183Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"2ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:07:54.938Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:07:54.941Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"1ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:17:42.118Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"143ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:17:44.388Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"53ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:18:55.191Z","level":"INFO","message":"POST /","data":{"status":201,"duration":"103ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:18:55.221Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"24ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:19:07.518Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"45ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:19:10.058Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"10ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:19:11.848Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"30ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:19:11.859Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"36ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:19:15.879Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:19:15.881Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"0ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:24:50.687Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"7ms","ip":"::1"}}
+{"timestamp":"2026-03-16T16:36:16.575Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-16T16:36:16.602Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-16T16:36:16.747Z","level":"INFO","message":"Database disconnected"}

@@ -1,0 +1,53 @@
+{"timestamp":"2026-03-28T05:49:58.568Z","level":"ERROR","message":"✗ Failed to start server","data":"querySrv ETIMEOUT _mongodb._tcp.fitnova.5stbsmv.mongodb.net","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.fitnova.5stbsmv.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:294:17)"}
+{"timestamp":"2026-03-28T05:59:53.368Z","level":"INFO","message":"✓ MongoDB connected"}
+{"timestamp":"2026-03-28T05:59:53.377Z","level":"INFO","message":"✓ Server running on port 5000"}
+{"timestamp":"2026-03-28T05:59:53.379Z","level":"INFO","message":"Environment: development"}
+{"timestamp":"2026-03-28T06:17:12.758Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"740ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:17:13.001Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"160ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:17:13.005Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"139ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:17:14.761Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"325ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:18:16.869Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"181ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:18:25.301Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"169ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:18:26.600Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"197ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:18:29.000Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"261ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:18:31.170Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"202ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:19:59.796Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"163ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:20:01.370Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"219ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:20:02.467Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"150ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:20:04.922Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"154ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:24:54.416Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"184ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:24:55.664Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"193ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:25:01.344Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"157ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:25:11.283Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"189ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:31:03.098Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"168ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:31:12.256Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"198ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:33:22.966Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"155ms","ip":"::1"}}
+{"timestamp":"2026-03-28T06:53:23.330Z","level":"INFO","message":"POST /refresh","data":{"status":200,"duration":"26ms","ip":"::1"}}
+{"timestamp":"2026-03-28T07:13:23.284Z","level":"INFO","message":"POST /refresh","data":{"status":200,"duration":"9ms","ip":"::1"}}
+{"timestamp":"2026-03-28T07:33:23.259Z","level":"INFO","message":"POST /refresh","data":{"status":200,"duration":"12ms","ip":"::1"}}
+{"timestamp":"2026-03-28T07:53:23.248Z","level":"INFO","message":"POST /refresh","data":{"status":200,"duration":"3ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:08:25.635Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"351ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:08:27.841Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"183ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:08:30.642Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"211ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:08:33.828Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"190ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:22:09.190Z","level":"INFO","message":"GET /","data":{"status":200,"duration":"139ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:22:10.354Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"163ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:22:41.993Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"128ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:22:41.996Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"121ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:22:43.997Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"195ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:22:47.280Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"215ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:28:33.619Z","level":"INFO","message":"POST /refresh","data":{"status":200,"duration":"5ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:37:40.909Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"203ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:38:52.158Z","level":"INFO","message":"POST /logout","data":{"status":200,"duration":"15ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:39:10.435Z","level":"INFO","message":"POST /login","data":{"status":200,"duration":"451ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:39:10.578Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"106ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:39:10.585Z","level":"INFO","message":"GET /","data":{"status":304,"duration":"109ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:39:12.952Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"187ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:39:15.558Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"184ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:39:15.854Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"197ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:39:17.131Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"200ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:43:30.808Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"418ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:43:33.332Z","level":"INFO","message":"GET /dashboard","data":{"status":200,"duration":"161ms","ip":"::1"}}
+{"timestamp":"2026-03-28T08:57:54.657Z","level":"INFO","message":"Graceful shutdown initiated"}
+{"timestamp":"2026-03-28T08:57:54.670Z","level":"INFO","message":"HTTP server closed"}
+{"timestamp":"2026-03-28T08:57:54.730Z","level":"INFO","message":"Database disconnected"}
