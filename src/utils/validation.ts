@@ -6,8 +6,16 @@ export const registerSchema = z.object({
   password: z.string().min(12, 'Password must be at least 12 characters'),
   firstName: z.string().min(1, 'First name is required').max(50, 'First name too long'),
   lastName: z.string().min(1, 'Last name is required').max(50, 'Last name too long'),
-  dateOfBirth: z.string().datetime('Invalid date format').transform(str => new Date(str)),
-  gender: z.enum(['M', 'F', 'Other'], { errorMap: () => ({ message: 'Invalid gender' }) }),
+  dateOfBirth: z.string()
+    .refine(str => !isNaN(Date.parse(str)), { message: 'Invalid date format' })
+    .transform(str => new Date(str)),
+  gender: z.preprocess(
+    (val) => {
+      const map: Record<string, string> = { male: 'M', female: 'F', other: 'Other', m: 'M', f: 'F' };
+      return typeof val === 'string' ? (map[val.toLowerCase()] ?? val) : val;
+    },
+    z.enum(['M', 'F', 'Other'], { errorMap: () => ({ message: 'Invalid gender. Use M, F, or Other' }) })
+  ),
   height: z.number().positive('Height must be positive').max(300, 'Invalid height'),
   currentWeight: z.number().positive('Weight must be positive').max(500, 'Invalid weight'),
 });
