@@ -3,13 +3,13 @@ import { z } from 'zod';
 // Auth Schemas
 export const registerSchema = z.object({
   email: z.string().email('Invalid email format').toLowerCase(),
-  password: z.string().min(12, 'Password must be at least 12 characters'),
+  password: z.string().min(8, 'Password must be at least 8 characters'),
   firstName: z.string().min(1, 'First name is required').max(50, 'First name too long'),
   lastName: z.string().min(1, 'Last name is required').max(50, 'Last name too long'),
-  dateOfBirth: z.string().datetime('Invalid date format').transform(str => new Date(str)),
+  dateOfBirth: z.string().refine((val) => !isNaN(Date.parse(val)), { message: 'Invalid date format' }).transform(str => new Date(str)),
   gender: z.enum(['M', 'F', 'Other'], { errorMap: () => ({ message: 'Invalid gender' }) }),
-  height: z.number().positive('Height must be positive').max(300, 'Invalid height'),
-  currentWeight: z.number().positive('Weight must be positive').max(500, 'Invalid weight'),
+  height: z.coerce.number().positive('Height must be positive').max(300, 'Invalid height'),
+  currentWeight: z.coerce.number().positive('Weight must be positive').max(500, 'Invalid weight'),
 });
 
 export const loginSchema = z.object({

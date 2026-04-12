@@ -36,6 +36,7 @@ interface TokenPayload {
 export class AuthService {
   private saltRounds = parseInt(process.env.BCRYPT_SALT_ROUNDS || '12');
   private jwtSecret = process.env.JWT_SECRET || 'secret';
+  private jwtRefreshSecret = process.env.JWT_REFRESH_SECRET || (this.jwtSecret + '-refresh');
   private jwtExpiration = process.env.JWT_EXPIRATION || '24h';
   private refreshTokenExpiration = process.env.REFRESH_TOKEN_EXPIRATION || '7d';
   private maxLoginAttempts = 5;
@@ -175,7 +176,7 @@ export class AuthService {
       type: 'refresh',
     };
 
-    return jwt.sign(payload, this.jwtSecret, {
+    return jwt.sign(payload, this.jwtRefreshSecret, {
       expiresIn: this.refreshTokenExpiration,
     } as any);
   }
@@ -215,33 +216,21 @@ export class AuthService {
 
   verifyToken(token: string): TokenPayload {
     try {
-      console.log('🔐 AuthService.verifyToken - Token length:', token.length);
-      console.log('🔐 AuthService.verifyToken - Token preview:', token.substring(0, 50) + '...');
-      console.log('🔐 AuthService.verifyToken - JWT_SECRET:', this.jwtSecret ? '✅ Set' : '❌ Not set');
-      console.log('🔐 AuthService.verifyToken - JWT_SECRET length:', this.jwtSecret.length);
-      
       const decoded = jwt.verify(token, this.jwtSecret) as TokenPayload;
-      console.log('🔐 AuthService.verifyToken - Token decoded successfully');
-      console.log('🔐 AuthService.verifyToken - Decoded payload:', JSON.stringify(decoded, null, 2));
       
       if (decoded.type !== 'access') {
-        console.error('❌ AuthService.verifyToken - Invalid token type:', decoded.type);
         throw new Error('Invalid token type');
       }
       
-      console.log('✅ AuthService.verifyToken - Token is valid access token');
       return decoded;
     } catch (error: any) {
-      console.error('❌ AuthService.verifyToken - Verification failed:', error.message);
-      console.error('❌ AuthService.verifyToken - Error name:', error.name);
-      console.error('❌ AuthService.verifyToken - Error details:', error);
       throw new Error('Invalid or expired token');
     }
   }
 
   refreshAccessToken(refreshToken: string): { token: string; expiresIn: string } {
     try {
-      const decoded = jwt.verify(refreshToken, this.jwtSecret) as TokenPayload;
+      const decoded = jwt.verify(refreshToken, this.jwtRefreshSecret) as TokenPayload;
 
       if (decoded.type !== 'refresh') {
         throw new Error('Invalid token type');
@@ -265,25 +254,8 @@ export class AuthService {
   validatePassword(password: string): { valid: boolean; errors: string[] } {
     const errors: string[] = [];
 
-    // Requirement: 12+ characters
-    if (password.length < 12) {
-      errors.push('Password must be at least 12 characters');
-    }
-    // Requirement: At least one uppercase letter
-    if (!/[A-Z]/.test(password)) {
-      errors.push('Password must contain at least one uppercase letter');
-    }
-    // Requirement: At least one lowercase letter
-    if (!/[a-z]/.test(password)) {
-      errors.push('Password must contain at least one lowercase letter');
-    }
-    // Requirement: At least one number
-    if (!/[0-9]/.test(password)) {
-      errors.push('Password must contain at least one number');
-    }
-    // Requirement: At least one special character
-    if (!/[!@#$%^&*]/.test(password)) {
-      errors.push('Password must contain at least one special character (!@#$%^&*)');
+    if (password.length < 8) {
+      errors.push('Password must be at least 8 characters');
     }
 
     return {

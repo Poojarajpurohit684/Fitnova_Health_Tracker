@@ -37,23 +37,32 @@ import { ButtonComponent } from '../../../../shared/components/Button/button.com
           <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="flex-column gap-lg">
             <div class="grid grid-cols-2 gap-md mobile-stack-grid">
               <app-form-input
-                label="Full Name"
+                label="First Name"
                 type="text"
-                placeholder="John Doe"
-                formControlName="name"
-                [validationState]="getValidationState('name')"
-                [errorMessage]="getErrorMessage('name')"
+                placeholder="John"
+                formControlName="firstName"
+                [validationState]="getValidationState('firstName')"
+                [errorMessage]="getErrorMessage('firstName')"
               ></app-form-input>
 
               <app-form-input
-                label="Email Address"
-                type="email"
-                placeholder="name@example.com"
-                formControlName="email"
-                [validationState]="getValidationState('email')"
-                [errorMessage]="getErrorMessage('email')"
+                label="Last Name"
+                type="text"
+                placeholder="Doe"
+                formControlName="lastName"
+                [validationState]="getValidationState('lastName')"
+                [errorMessage]="getErrorMessage('lastName')"
               ></app-form-input>
             </div>
+
+            <app-form-input
+              label="Email Address"
+              type="email"
+              placeholder="name@example.com"
+              formControlName="email"
+              [validationState]="getValidationState('email')"
+              [errorMessage]="getErrorMessage('email')"
+            ></app-form-input>
 
             <div class="grid grid-cols-2 gap-md mobile-stack-grid">
               <div class="flex-column gap-xs">
@@ -337,9 +346,10 @@ export class RegisterComponent {
     private router: Router
   ) {
     this.registerForm = this.fb.group({
-      name: ['', [Validators.required]],
+      firstName: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(50)]],
+      lastName: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(50)]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(12)]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
       confirmPassword: ['', [Validators.required]],
       dateOfBirth: ['', [Validators.required]],
       gender: ['M', [Validators.required]],
@@ -368,9 +378,10 @@ export class RegisterComponent {
   getErrorMessage(fieldName: string): string | undefined {
     const field = this.registerForm.get(fieldName);
     if (!field || !field.touched || field.valid) return undefined;
-    if (fieldName === 'name' && field.hasError('required')) return 'Full name is required';
+    if (fieldName === 'firstName' && field.hasError('required')) return 'First name is required';
+    if (fieldName === 'lastName' && field.hasError('required')) return 'Last name is required';
     if (fieldName === 'email' && field.hasError('email')) return 'Please enter a valid email address';
-    if (fieldName === 'password' && field.hasError('minlength')) return 'Password must be at least 12 characters';
+    if (fieldName === 'password' && field.hasError('minlength')) return 'Password must be at least 8 characters';
     if (fieldName === 'confirmPassword' && field.hasError('passwordMismatch')) return 'Passwords do not match';
     if (fieldName === 'dateOfBirth' && field.hasError('required')) return 'Birth date is required';
     return 'This field is required';
@@ -402,10 +413,7 @@ export class RegisterComponent {
     if (this.registerForm.valid) {
       this.loading = true;
       this.error = null;
-      const { name, email, password, dateOfBirth, gender, height, currentWeight } = this.registerForm.value;
-      const nameParts = name.trim().split(' ');
-      const firstName = nameParts[0];
-      const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+      const { firstName, lastName, email, password, dateOfBirth, gender, height, currentWeight } = this.registerForm.value;
 
       // Format date to ISO string for backend
       const formattedDate = new Date(dateOfBirth).toISOString();

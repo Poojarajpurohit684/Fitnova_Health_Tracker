@@ -64,7 +64,7 @@ describe('Auth Routes - Bcrypt Integration', () => {
       expect(response.body.refreshToken).toBeDefined();
     });
 
-    it('should reject registration with weak password (less than 12 chars)', async () => {
+    it('should reject registration with weak password (less than 8 chars)', async () => {
       const registerData = {
         email: 'newuser@example.com',
         password: 'Weak1!',
@@ -84,91 +84,50 @@ describe('Auth Routes - Bcrypt Integration', () => {
       expect(response.body.error.code).toBe('VALIDATION_ERROR');
       // Check if the error details contain the password validation error
       expect(response.body.error.details).toBeDefined();
-      expect(JSON.stringify(response.body.error.details)).toContain('12 characters');
+      expect(JSON.stringify(response.body.error.details)).toContain('8 characters');
     });
 
-    it('should reject registration with password missing uppercase', async () => {
+    it('should accept registration with password having only lowercase', async () => {
       const registerData = {
         email: 'newuser@example.com',
-        password: 'securepass123!',
+        password: 'securepass',
         firstName: 'Test',
         lastName: 'User',
-        dateOfBirth: '1990-01-01T00:00:00Z',
+        dateOfBirth: '1990-01-01T00:00:00.000Z',
         gender: 'M',
         height: 180,
         currentWeight: 75,
       };
 
-      const response = await request(app)
-        .post('/api/v1/auth/register')
-        .send(registerData);
-
-      expect(response.status).toBe(400);
-      expect(response.body.error.code).toBe('REGISTRATION_ERROR');
-      expect(response.body.error.message).toContain('uppercase');
-    });
-
-    it('should reject registration with password missing lowercase', async () => {
-      const registerData = {
-        email: 'newuser@example.com',
-        password: 'SECUREPASS123!',
-        firstName: 'Test',
-        lastName: 'User',
-        dateOfBirth: '1990-01-01T00:00:00Z',
-        gender: 'M',
-        height: 180,
-        currentWeight: 75,
+      const mockUser = {
+        _id: '507f1f77bcf86cd799439011',
+        email: registerData.email,
+        username: 'newuser',
+        passwordHash: await bcryptjs.hash(registerData.password, 12),
+        firstName: registerData.firstName,
+        lastName: registerData.lastName,
+        dateOfBirth: new Date(registerData.dateOfBirth),
+        gender: registerData.gender,
+        height: registerData.height,
+        currentWeight: registerData.currentWeight,
+        targetWeight: registerData.currentWeight,
+        activityLevel: 'moderate',
+        isEmailVerified: false,
+        isActive: true,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        save: jest.fn().mockResolvedValue(true),
       };
 
-      const response = await request(app)
-        .post('/api/v1/auth/register')
-        .send(registerData);
-
-      expect(response.status).toBe(400);
-      expect(response.body.error.code).toBe('REGISTRATION_ERROR');
-      expect(response.body.error.message).toContain('lowercase');
-    });
-
-    it('should reject registration with password missing number', async () => {
-      const registerData = {
-        email: 'newuser@example.com',
-        password: 'SecurePassword!',
-        firstName: 'Test',
-        lastName: 'User',
-        dateOfBirth: '1990-01-01T00:00:00Z',
-        gender: 'M',
-        height: 180,
-        currentWeight: 75,
-      };
+      (User.findOne as jest.Mock).mockResolvedValue(null);
+      (User as any).mockImplementation(() => mockUser);
 
       const response = await request(app)
         .post('/api/v1/auth/register')
         .send(registerData);
 
-      expect(response.status).toBe(400);
-      expect(response.body.error.code).toBe('REGISTRATION_ERROR');
-      expect(response.body.error.message).toContain('number');
-    });
-
-    it('should reject registration with password missing special character', async () => {
-      const registerData = {
-        email: 'newuser@example.com',
-        password: 'SecurePassword123',
-        firstName: 'Test',
-        lastName: 'User',
-        dateOfBirth: '1990-01-01T00:00:00Z',
-        gender: 'M',
-        height: 180,
-        currentWeight: 75,
-      };
-
-      const response = await request(app)
-        .post('/api/v1/auth/register')
-        .send(registerData);
-
-      expect(response.status).toBe(400);
-      expect(response.body.error.code).toBe('REGISTRATION_ERROR');
-      expect(response.body.error.message).toContain('special character');
+      expect(response.status).toBe(201);
+      expect(response.body.token).toBeDefined();
     });
 
     it('should reject registration with duplicate email', async () => {
@@ -337,10 +296,10 @@ describe('Auth Routes - Bcrypt Integration', () => {
   });
 
   describe('Password Strength Validation', () => {
-    it('should accept password with exactly 12 characters', async () => {
+    it('should accept password with exactly 8 characters', async () => {
       const registerData = {
         email: 'newuser@example.com',
-        password: 'SecurePass1!',
+        password: 'SePas1!a',
         firstName: 'Test',
         lastName: 'User',
         dateOfBirth: '1990-01-01T00:00:00Z',
@@ -380,7 +339,7 @@ describe('Auth Routes - Bcrypt Integration', () => {
       expect(response.body.token).toBeDefined();
     });
 
-    it('should accept password with more than 12 characters', async () => {
+    it('should accept password with more than 8 characters', async () => {
       const registerData = {
         email: 'newuser@example.com',
         password: 'VerySecurePassword123!',

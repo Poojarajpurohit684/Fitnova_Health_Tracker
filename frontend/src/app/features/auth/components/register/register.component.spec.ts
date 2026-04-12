@@ -45,7 +45,8 @@ describe('RegisterComponent', () => {
   });
 
   it('should initialize required form controls', () => {
-    expect(component.registerForm.get('name')).toBeTruthy();
+    expect(component.registerForm.get('firstName')).toBeTruthy();
+    expect(component.registerForm.get('lastName')).toBeTruthy();
     expect(component.registerForm.get('email')).toBeTruthy();
     expect(component.registerForm.get('password')).toBeTruthy();
     expect(component.registerForm.get('confirmPassword')).toBeTruthy();
@@ -66,7 +67,8 @@ describe('RegisterComponent', () => {
 
   it('should not submit if form invalid', () => {
     component.registerForm.patchValue({
-      name: '',
+      firstName: '',
+      lastName: '',
       email: 'invalid',
       password: 'short',
       confirmPassword: 'short',
@@ -82,7 +84,8 @@ describe('RegisterComponent', () => {
     authService.register.and.returnValue(of({ userId: '123', user: { firstName: 'John' } } as any));
 
     component.registerForm.patchValue({
-      name: 'John Doe',
+      firstName: 'John',
+      lastName: 'Doe',
       email: 'john@example.com',
       password: 'Password123!@#',
       confirmPassword: 'Password123!@#',

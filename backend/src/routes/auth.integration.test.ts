@@ -88,7 +88,7 @@ describe('Auth Endpoints - Integration Tests', () => {
       expect(response.body.error.message).toContain('Email already in use');
     });
 
-    it('should reject registration with weak password (less than 12 chars)', async () => {
+    it('should reject registration with weak password (less than 8 chars)', async () => {
       const registerData = {
         email: 'newuser@example.com',
         password: 'Weak1!',

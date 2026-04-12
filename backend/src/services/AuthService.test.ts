@@ -162,37 +162,31 @@ describe('AuthService - Password Hashing with Bcrypt', () => {
   });
 
   describe('Password Strength Validation', () => {
-    it('should require minimum 12 characters', () => {
+    it('should require minimum 8 characters', () => {
       const result = authService.validatePassword('Short1!');
       expect(result.valid).toBe(false);
-      expect(result.errors).toContain('Password must be at least 12 characters');
+      expect(result.errors).toContain('Password must be at least 8 characters');
     });
 
-    it('should require at least one uppercase letter', () => {
-      const result = authService.validatePassword('securepass123!');
-      expect(result.valid).toBe(false);
-      expect(result.errors).toContain('Password must contain at least one uppercase letter');
+    it('should accept password with exactly 8 characters', () => {
+      const result = authService.validatePassword('testpass');
+      expect(result.valid).toBe(true);
+      expect(result.errors.length).toBe(0);
     });
 
-    it('should require at least one lowercase letter', () => {
-      const result = authService.validatePassword('SECUREPASS123!');
-      expect(result.valid).toBe(false);
-      expect(result.errors).toContain('Password must contain at least one lowercase letter');
+    it('should accept password with only lowercase letters', () => {
+      const result = authService.validatePassword('securepass');
+      expect(result.valid).toBe(true);
+      expect(result.errors.length).toBe(0);
     });
 
-    it('should require at least one number', () => {
-      const result = authService.validatePassword('SecurePassword!');
-      expect(result.valid).toBe(false);
-      expect(result.errors).toContain('Password must contain at least one number');
-    });
-
-    it('should require at least one special character', () => {
+    it('should accept password without special characters', () => {
       const result = authService.validatePassword('SecurePassword123');
-      expect(result.valid).toBe(false);
-      expect(result.errors).toContain('Password must contain at least one special character (!@#$%^&*)');
+      expect(result.valid).toBe(true);
+      expect(result.errors.length).toBe(0);
     });
 
-    it('should accept valid password with all requirements', () => {
+    it('should accept valid password with all character types', () => {
       const result = authService.validatePassword('SecurePass123!');
       expect(result.valid).toBe(true);
       expect(result.errors.length).toBe(0);
@@ -204,13 +198,13 @@ describe('AuthService - Password Hashing with Bcrypt', () => {
       expect(result.errors.length).toBe(0);
     });
 
-    it('should accept valid password with exactly 12 characters', () => {
-      const result = authService.validatePassword('SecurePass1!');
+    it('should accept valid password with exactly 8 characters', () => {
+      const result = authService.validatePassword('SePas1!a');
       expect(result.valid).toBe(true);
       expect(result.errors.length).toBe(0);
     });
 
-    it('should accept valid password with more than 12 characters', () => {
+    it('should accept valid password with more than 8 characters', () => {
       const result = authService.validatePassword('VerySecurePassword123!');
       expect(result.valid).toBe(true);
       expect(result.errors.length).toBe(0);
@@ -296,7 +290,8 @@ describe('AuthService - Password Hashing with Bcrypt', () => {
       const token = (authService as any).generateRefreshToken(mockUser);
       expect(token).toBeDefined();
 
-      const decoded = jwt.verify(token, process.env.JWT_SECRET || 'secret') as any;
+      const refreshSecret = (process.env.JWT_SECRET || 'secret') + '-refresh';
+      const decoded = jwt.verify(token, process.env.JWT_REFRESH_SECRET || refreshSecret) as any;
       expect(decoded.userId).toBe(mockUser._id.toString());
       expect(decoded.email).toBe(mockUser.email);
       expect(decoded.type).toBe('refresh');
